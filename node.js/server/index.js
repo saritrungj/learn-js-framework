@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyparser = require('body-parser');
+const mysql = require('mysql2/promise');
 const app = express();
 const port = 8000;
 
@@ -7,6 +8,26 @@ app.use(bodyparser.json());
 
 let users = [];
 let counter = 1;
+
+app.get('/testdb', (req, res) => {
+  mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'password',
+    database: 'yourdb'
+  }).then((conn) => {
+    // สิ่งนี้เราเรียกกันว่า promise
+    conn
+    .query('SELECT * FROM users')
+    .then((results) => {
+      res.json(results[0])
+    })
+    .catch((error) => {
+      console.error('Error fetching users:', error.message)
+      res.status(500).json({ error: 'Error fetching users' })
+    })
+  })
+});
 
 // path = GET /users
 app.get('/users', (req, res) => {
