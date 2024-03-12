@@ -1,42 +1,66 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.poke-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  padding: 3rem;
+  border-radius: 25px;
+  background-color: #dcdcdc;
+}
+
+.poke-header h1 {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.poke-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.poke-info .poke-header-image {
+  width: 50%;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.poke-info {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.button button {
+  margin-top: 2rem;
+  width: 100px;
+  margin-right: 2rem;
+  transition: transform .3s;
 }
 
-.card {
-  padding: 2em;
+.button button:hover {
+  transform: scale(1.2);
 }
 
-.read-the-docs {
-  color: #888;
+.button button:focus {
+  border: none;
 }
+
+.button button:active {
+  border: none;
+}
+
