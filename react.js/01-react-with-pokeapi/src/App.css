@@ -22,22 +22,25 @@
 }
 
 .poke-header h1 {
+  width: 100%;
   text-align: center;
 }
 
 .poke-card {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.poke-info .poke-header-image {
-  width: 50%;
+.poke-info .poke-header-image img{
+  width: 100%;
   margin-top: -2rem;
   margin-bottom: 2rem;
   }
 
 .poke-info {
+  width: 100%;
   margin-top: 6rem;
   display: flex;
   flex-direction: column;
