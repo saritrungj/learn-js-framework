@@ -1,5 +1,5 @@
 // updater function = A function passed as an argument to setState() usually
-//                    ex. setYear(arrow function)
+//                    ex. setYear(y => y + 1)
 //                    Allow for safge updates based on the previous sate
 //                    Used with multiple sate updates and asynchronous functions
 //                    Good practice to use updater functions
@@ -11,19 +11,20 @@ function MyComponent() {
 
   const increment = () => {
 
-    // uses the CURRENT state to calculate the NEXT state.
-    // set functions fo not trigger an update.
-    // React barches together state updates for performance reasons.
-    // NEXT state becomes the use updater functions
-    setCount(count + 1);
+    // UPDATE FUNCTIONS
+    setCount(prevCount => prevCount + 1);
+    setCount(prevCount => prevCount + 1);
+    setCount(prevCount => prevCount + 1);
   }
 
   const decrement = () => {
-    setCount(count - 1);
+    setCount(prevCount => prevCount - 1);
+    setCount(prevCount => prevCount - 1);
+    setCount(prevCount => prevCount - 1);
   }
-  
+
   const reset = () => {
-    setCount(0);
+    setCount(prevCount => prevCount = 0);
   }
 
   return (
