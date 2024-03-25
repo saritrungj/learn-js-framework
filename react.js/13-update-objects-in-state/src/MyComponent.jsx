@@ -7,10 +7,10 @@ function MyComponent() {
     setCar(c => ({...c, year: event.target.value}))
   }
   function handleMakeChange(event) {
-    setCar({make: event.target.value})
+    setCar(c => ({...c, make: event.target.value}))
   }
   function handleModelChange(event) {
-    setCar({model: event.target.value})
+    setCar(c => ({...c, model: event.target.value}))
   }
   return(
     <>

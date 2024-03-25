@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(30deg, #b0ff29 ,#ffb453);
+}
+
+.todo-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.775), hsla(0, 0%, 28%, 0.598));
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  padding: 3rem;
+}
+
+.todo-list-container h1 {
+  color: #000;
+  font-weight: 500;
+  font-size: 3rem;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+  margin-bottom: 2rem;
+}
+
+.new-task {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.new-task input {
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  text-indent: .7rem;
+  width: 300px;
+  height: 50px;
+  padding: .5rem;
+}
+
+.new-task .add-button {
+  background-color: #b0ff29;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  width: 75px;
+  height: 50px;
+  margin-left: 0.7rem;
+  transition: transform .15s, box-shadow .15s;
+  cursor: pointer;
+}
+
+.new-task .add-button:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+.task-list {
+  width: 100%;
+}
+
+.task-list ul {
+  list-style: none;
+}
+
+.task-list ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  padding: .5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.task-list .buttons button {
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 0.3rem .5rem;
+  margin: 0 .3rem;
+  transition: transform .15s, box-shadow .15s;
+  cursor: pointer;
+}
+
+.task-list .buttons button:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+.task-list .buttons .delete-button {
+  background-color: tomato;
+  color: #fff;
+}
+
+.task-list .buttons .move-button {
+  width: 35px;
+  background-color: #b0ff29;
+}
